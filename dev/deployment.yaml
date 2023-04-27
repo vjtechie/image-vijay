@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: hello-world
+  template:
+    metadata:
+      labels:
+        app: hello-world
+    spec:
+      imagePullSecrets:
+      - name: imagepull-docker
+      containers:
+      - name: hello-world
+        image: ramakrishna8254/week:v1
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 8080
