@@ -20,4 +20,4 @@ spec:
         image: vijaysvk333/mavenwebapp_dockerhub:latest
         imagePullPolicy: Always
         ports:
-          - containerPort: 8080
+          - containerPort: 8888
