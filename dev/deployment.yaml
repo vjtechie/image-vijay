@@ -17,7 +17,7 @@ spec:
       - name: imagepull-docker
       containers:
       - name: web-app
-        image: vijaysvk333/mavenwebapp_dockerhub:latest
+        image: ramakrishna8254/week:v1
         imagePullPolicy: Always
         ports:
-          - containerPort: 8888
+          - containerPort: 8080
